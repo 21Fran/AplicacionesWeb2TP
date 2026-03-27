@@ -1,0 +1,115 @@
+{
+  "electronica": [
+    {
+      "nombre": "PlayStation 5",
+      "precio": 599,
+      "imagen": "https://arsonyb2c.vtexassets.com/arquivos/ids/368377/Imagen-02_2000-x-2000-px.jpg.jpg?v=638893889600130000",
+      "rating": 4.9,
+      "reviews": 850
+    },
+    {
+      "nombre": "Xbox Series X",
+      "precio": 549,
+      "imagen": "https://cms-assets.xboxservices.com/assets/bc/40/bc40fdf3-85a6-4c36-af92-dca2d36fc7e5.png?n=642227_Hero-Gallery-0_A1_857x676.png",
+      "rating": 4.8,
+      "reviews": 720
+    },
+    {
+      "nombre": "Nintendo Switch OLED",
+      "precio": 399,
+      "imagen": "https://nextgames.com.ar/img/Public/1040-producto-switch-neon-1-3964.jpg",
+      "rating": 4.7,
+      "reviews": 610
+    },
+    {
+      "nombre": "Auriculares Gamer HyperX",
+      "precio": 79,
+      "imagen": "https://row.hyperx.com/cdn/shop/files/hyperx_cloud_alpha_wireless_1_main.jpg?v=1745914432",
+      "rating": 4.6,
+      "reviews": 420
+    },
+    {
+      "nombre": "Control DualSense PS5",
+      "precio": 69,
+      "imagen": "https://arsonyb2c.vtexassets.com/arquivos/ids/348023/PS5_DS_Pshot_A.jpg?v=638767911345030000",
+      "rating": 4.7,
+      "reviews": 500
+    },
+    {
+      "nombre": "Mando Xbox Series X",
+      "precio": 65,
+      "imagen": "https://m.media-amazon.com/images/I/61YNiiJizXL._SL1500_.jpg",
+      "rating": 4.7,
+      "reviews": 430
+    }
+  ],
+  "juegos": [
+    {
+      "nombre": "The Legend of Zelda: Tears of the Kingdom",
+      "precio": 69,
+      "imagen": "https://www.cdmarket.com.ar/Image/0/600_750-91O9Uk5oWAL._SL1500_.jpg",
+      "rating": 5.0,
+      "reviews": 1500
+    },
+    {
+      "nombre": "God of War: Ragnarök",
+      "precio": 59,
+      "imagen": "https://media.vandal.net/m/90451/god-of-war-ragnarok-20221131016774_1.jpg",
+      "rating": 4.9,
+      "reviews": 1200
+    },
+    {
+      "nombre": "Halo Infinite",
+      "precio": 49,
+      "imagen": "https://www.storegames.ar/files/images/productos/1644613415-halo-infinite-xbox-one.jpg",
+      "rating": 4.6,
+      "reviews": 800
+    }
+  ],
+  "ropa": [
+    {
+      "nombre": "Camiseta Zelda",
+      "precio": 25,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuYEn_KFwFvFlNJoRdy5EsFM6HPlNgvdrGeg&s",
+      "rating": 4.6,
+      "reviews": 120
+    },
+    {
+      "nombre": "Buzo PlayStation",
+      "precio": 45,
+      "imagen": "https://www.moha.com.ar/producto/3-21-010-10/md/3.jpg",
+      "rating": 4.7,
+      "reviews": 80
+    },
+    {
+      "nombre": "Gorra Gamer",
+      "precio": 20,
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_747898-MLA78198244063_082024-O.webp",
+      "rating": 4.4,
+      "reviews": 65
+    }
+  ],
+  "hogar": [
+    {
+      "nombre": "Lámpara Pac-Man",
+      "precio": 30,
+      "imagen": "https://i0.wp.com/tienda.ohmyshop.com.ar/wp-content/uploads/2019/03/FB-VIR-1338-C-4.jpg?fit=600%2C600&ssl=1",
+      "rating": 4.8,
+      "reviews": 45
+    },
+    {
+      "nombre": "Silla Gamer Pro",
+      "precio": 199,
+      "imagen": "https://images.fravega.com/f500/58646d7217b8b76db36de8d8bbefc8a6.jpg",
+      "rating": 4.9,
+      "reviews": 300
+    },
+    {
+      "nombre": "Reloj de Pared Sonic",
+      "precio": 25,
+      "imagen": "https://kidslicensing.com/wp-content/uploads/2023/04/SNC3002.jpg",
+      "rating": 4.6,
+      "reviews": 40
+    }
+  ]
+}
