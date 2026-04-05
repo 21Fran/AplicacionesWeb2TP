@@ -5,7 +5,7 @@ const body = document.body; // solo cambiará el fondo del body
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
   body.classList.add('dark-bg');
-  toggleButton.textContent = '☀️';
+  toggleButton.textContent = 'Light';
 }
 
 // Cambiar tema al hacer click
@@ -13,10 +13,10 @@ toggleButton.addEventListener('click', () => {
   body.classList.toggle('dark-bg');
 
   if (body.classList.contains('dark-bg')) {
-    toggleButton.textContent = '☀️';
+    toggleButton.textContent = 'Light';
     localStorage.setItem('theme', 'dark');
   } else {
-    toggleButton.textContent = '🌙';
+    toggleButton.textContent = 'Dark';
     localStorage.setItem('theme', 'light');
   }
 });

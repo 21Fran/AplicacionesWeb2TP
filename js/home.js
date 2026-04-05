@@ -29,7 +29,7 @@ function logout() {
   window.location.href = '../index.html';
 }
 
-// 🔎 Buscador
+// Buscador
 document.getElementById('search').addEventListener('input', function() {
   const term = this.value.toLowerCase();
   const allProducts = productGrid.querySelectorAll('.product-card');
@@ -47,7 +47,7 @@ document.getElementById('search').addEventListener('input', function() {
   productCount.textContent = visibleCount + ' productos encontrados';
 });
 
-// 🛒 Carrito con localStorage
+// Carrito con localStorage
 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
 function updateCartCount() {
@@ -70,7 +70,7 @@ function renderCart() {
     li.style.marginBottom = '0.5rem';
     li.innerHTML = `
       ${item.name} - ${item.price} 
-      <button onclick="removeFromCart(${index})" style="margin-left:0.5rem;">❌</button>
+      <button onclick="removeFromCart(${index})" style="margin-left:0.5rem;">X</button>
     `;
     cartItems.appendChild(li);
 
@@ -132,10 +132,10 @@ function mostrarProductos(data) {
           <img src="${prod.imagen}" alt="${prod.nombre}">
         </div>
         <h4>${prod.nombre}</h4>
-        <div class="flex">⭐ ${prod.rating} (${prod.reviews})</div>
+        <div class="flex">Rating ${prod.rating} (${prod.reviews})</div>
         <div class="flex justify-between">
           <span>$${prod.precio}</span>
-          <button class="button-sm" onclick="addToCart('${prod.nombre}', '$${prod.precio}')">🛒 Agregar</button>
+          <button class="button-sm" onclick="addToCart('${prod.nombre}', '$${prod.precio}')">Agregar</button>
         </div>
       `;
 
