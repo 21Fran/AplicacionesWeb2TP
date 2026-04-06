@@ -90,15 +90,15 @@
   </div>
 </div>
 <!-- Contenedor del carrito -->
-<div id="cart" style="display:none; position:absolute; right:1rem; top:3rem; background:var(--card); border:1px solid var(--border); padding:1rem; border-radius:var(--radius); width:300px; max-height:400px; overflow-y:auto; z-index:1000;">
+<div id="cart">
   <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-    <h4 style="margin:0;">Carrito</h4>
+    <h4>Carrito</h4>
     <button class="button-sm" onclick="toggleCart()">Cerrar</button>
   </div>
 
-  <ul id="cart-items" style="list-style:none; padding:0; margin:0;"></ul>
+  <ul id="cart-items"></ul>
 
-  <p id="cart-total" style="font-weight:bold; margin-top:0.5rem;">Total: $0</p>
+  <p id="cart-total">Total: $0</p>
 
   <button class="button-sm" onclick="checkout()" style="width:100%; margin-top:0.5rem;">Comprar</button>
 </div>

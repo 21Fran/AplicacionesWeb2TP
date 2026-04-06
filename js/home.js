@@ -108,11 +108,66 @@ updateCartCount();
 
 //Creacion desde json
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("../data/productos.json")
-    .then(res => res.json())
-    .then(data => mostrarProductos(data))
+  Promise.all([
+    fetch("../data/productos.json").then(res => res.json()),
+    fetch("../data/ventas.json").then(res => res.json())
+  ])
+    .then(([productosData, ventasData]) => {
+      mostrarProductos(productosData);
+      validarRelacionVentasProductos(productosData, ventasData);
+    })
     .catch(err => console.error("Error cargando JSON:", err));
 });
+
+function obtenerMapaProductosPorId(dataProductos) {
+  const mapa = new Map();
+
+  for (const categoria in dataProductos) {
+    dataProductos[categoria].forEach(producto => {
+      mapa.set(Number(producto.id), producto);
+    });
+  }
+
+  return mapa;
+}
+
+function validarRelacionVentasProductos(dataProductos, dataVentas) {
+  const productosPorId = obtenerMapaProductosPorId(dataProductos);
+  const inconsistencias = [];
+
+  dataVentas.forEach(venta => {
+    venta.productos.forEach(productoVenta => {
+      const productoCatalogo = productosPorId.get(Number(productoVenta.id));
+
+      if (!productoCatalogo) {
+        inconsistencias.push(
+          `Venta ${venta.id}: el producto con id ${productoVenta.id} no existe en productos.json`
+        );
+        return;
+      }
+
+      if (productoCatalogo.nombre !== productoVenta.nombre) {
+        inconsistencias.push(
+          `Venta ${venta.id}: el nombre no coincide para id ${productoVenta.id} (${productoVenta.nombre} vs ${productoCatalogo.nombre})`
+        );
+      }
+
+      if (Number(productoCatalogo.precio) !== Number(productoVenta.precio)) {
+        inconsistencias.push(
+          `Venta ${venta.id}: el precio no coincide para id ${productoVenta.id} (${productoVenta.precio} vs ${productoCatalogo.precio})`
+        );
+      }
+    });
+  });
+
+  if (inconsistencias.length > 0) {
+    console.warn("Validacion ventas-productos: se detectaron inconsistencias");
+    inconsistencias.forEach(item => console.warn(item));
+    return;
+  }
+
+  console.info("Validacion ventas-productos: OK, todas las referencias son consistentes.");
+}
 
 function mostrarProductos(data) {
   const grid = document.getElementById("product-grid");
@@ -132,7 +187,8 @@ function mostrarProductos(data) {
           <img src="${prod.imagen}" alt="${prod.nombre}">
         </div>
         <h4>${prod.nombre}</h4>
-        <div class="flex">Rating ${prod.rating} (${prod.reviews})</div>
+        <div class="flex">${prod.desc}</div>
+        <div class="flex">${prod.en_oferta ? 'En oferta' : 'Precio regular'}</div>
         <div class="flex justify-between">
           <span>$${prod.precio}</span>
           <button class="button-sm" onclick="addToCart('${prod.nombre}', '$${prod.precio}')">Agregar</button>
