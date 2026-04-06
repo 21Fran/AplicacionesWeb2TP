@@ -145,5 +145,59 @@
                 "precio": 25
             }
         ]
+    },
+    {
+        "id": 6,
+        "id_usuario": 5,
+        "fecha": "2026-04-02",
+        "total": 178,
+        "dirección": "Alsina 221",
+        "productos": [
+            {
+                "id": 5,
+                "nombre": "Control DualSense PS5",
+                "cantidad": 1,
+                "precio": 69
+            },
+            {
+                "id": 8,
+                "nombre": "God of War: Ragnarök",
+                "cantidad": 1,
+                "precio": 59
+            },
+            {
+                "id": 10,
+                "nombre": "Camiseta Zelda",
+                "cantidad": 2,
+                "precio": 25
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "id_usuario": 6,
+        "fecha": "2026-04-04",
+        "total": 674,
+        "dirección": "Corrientes 987",
+        "productos": [
+            {
+                "id": 2,
+                "nombre": "Xbox Series X",
+                "cantidad": 1,
+                "precio": 549
+            },
+            {
+                "id": 6,
+                "nombre": "Mando Xbox Series X",
+                "cantidad": 1,
+                "precio": 65
+            },
+            {
+                "id": 13,
+                "nombre": "Lámpara Pac-Man",
+                "cantidad": 2,
+                "precio": 30
+            }
+        ]
     }
 ]
